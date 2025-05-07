@@ -48,7 +48,7 @@ export default function AddExpenseForm() {
           </SelectContent>
         </Select>
       </div>
-      <Button type="submit">Add Expense</Button>
+      <Button type="submit">Add Your Expense</Button>
     </form>
   )
 }

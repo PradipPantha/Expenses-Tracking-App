@@ -94,7 +94,7 @@ export default function BudgetPage() {
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-bold">Budget</h1>
         <Button className="gap-1" onClick={handleAddBudget}>
-          <PlusCircle className="h-4 w-4" /> Add Budget
+          <PlusCircle className="h-4 w-4" /> Add Your Budget Info
         </Button>
       </div>
 
@@ -102,7 +102,7 @@ export default function BudgetPage() {
       <div className="grid gap-4 grid-cols-1 md:grid-cols-3">
         <Card className="md:col-span-2">
           <CardHeader className="pb-2">
-            <CardTitle>Monthly Budget Overview</CardTitle>
+            <CardTitle>Your Monthly Budget Overview</CardTitle>
             <CardDescription>
               Total Budget: ${totalBudget.toFixed(2)} • Spent: ${totalSpent.toFixed(2)} • Remaining: $
               {(totalBudget - totalSpent).toFixed(2)}
@@ -124,7 +124,7 @@ export default function BudgetPage() {
         <Card>
           <CardHeader className="pb-2">
             <CardTitle>Budget Alerts</CardTitle>
-            <CardDescription>Notifications about your budgets</CardDescription>
+            <CardDescription>Notifications about your budgets records</CardDescription>
           </CardHeader>
           <CardContent>
             {budgets.some((budget) => budget.spent > budget.limit) ? (
@@ -158,7 +158,7 @@ export default function BudgetPage() {
       <Card>
         <CardHeader>
           <CardTitle>Budget Categories</CardTitle>
-          <CardDescription>Manage your monthly budget limits by category</CardDescription>
+          <CardDescription>Manage your monthly budget limits based on category</CardDescription>
         </CardHeader>
         <CardContent>
           <Table>
