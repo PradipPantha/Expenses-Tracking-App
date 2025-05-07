@@ -88,14 +88,14 @@ export default function AddExpensePage() {
     <div className="flex flex-col p-4 md:p-6">
       <div className="mb-6">
         <h1 className="text-2xl font-bold">Add Expense</h1>
-        <p className="text-muted-foreground">Record a new expense with details</p>
+        <p className="text-muted-foreground">Record a new expense with required details</p>
       </div>
 
       <Card className="max-w-2xl mx-auto">
         <form onSubmit={handleSubmit}>
           <CardHeader>
             <CardTitle>Expense Details</CardTitle>
-            <CardDescription>Fill in the information about your expense</CardDescription>
+            <CardDescription>Fill in the information about your expenses</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
@@ -111,7 +111,7 @@ export default function AddExpensePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="amount">Amount</Label>
+                <Label htmlFor="amount">Total Amount</Label>
                 <div className="relative">
                   <span className="absolute left-3 top-2.5">$</span>
                   <Input
@@ -161,7 +161,7 @@ export default function AddExpensePage() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="receipt">Receipt (Optional)</Label>
+              <Label htmlFor="receipt">Your Receipt (Optional)</Label>
               <div className="border rounded-md p-4 flex flex-col items-center justify-center cursor-pointer hover:bg-muted/50 transition-colors">
                 <label
                   htmlFor="receipt-upload"
@@ -210,7 +210,7 @@ export default function AddExpensePage() {
               <Label htmlFor="notes">Notes (Optional)</Label>
               <Textarea
                 id="notes"
-                placeholder="Add any additional details about this expense"
+                placeholder="Additional details about this expense"
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
               />
@@ -222,7 +222,7 @@ export default function AddExpensePage() {
             </Button>
             <Button type="submit" disabled={isSubmitting}>
               {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-              {isSubmitting ? "Saving..." : "Save Expense"}
+              {isSubmitting ? "Saving Expense Details..." : "Save Expense"}
             </Button>
           </CardFooter>
         </form>
